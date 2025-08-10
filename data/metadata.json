@@ -1,0 +1,21 @@
+{
+    "chartTypes": {
+        "internacion": {
+            "name": "Sala de Internación Conjunta",
+            "charts": {
+                "chart1": "Binomios Asistidos",
+                "chart2": "Finalización de Embarazo",
+                "chart3": "Sector de Consulta",
+                "chart4": "Educación en Puericultura",
+                "chart5": "Tipo de Atención"
+            }
+        },
+        "lactancia": {
+            "name": "Centro de Lactancia Materna",
+            "charts": {
+                "chart1": "Binomios que requieren asistencia",
+                "chart2": "Ocupacion de las Madres"
+            }
+        }
+    }
+}
