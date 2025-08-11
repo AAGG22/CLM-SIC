@@ -1,0 +1,132 @@
+/* -----------------------------
+   PALETA MINIMALISTA EN GRISES
+------------------------------ */
+:root {
+    --sidebar-width: 250px;
+
+    /* Grises principales */
+    --gray-50:  #f8f9fa;   /* fondo muy claro        */
+    --gray-200: #e9ecef;   /* hover / separadores    */
+    --gray-600: #6c757d;   /* texto / barras         */
+    --gray-800: #212529;   /* texto oscuro           */
+    --white:    #ffffff;   /* bordes y detalles      */
+}
+
+/* -----------------------------
+   LAYOUT GENERAL
+------------------------------ */
+body {
+    background-color: var(--gray-50);
+    color: var(--gray-800);
+}
+
+/* -----------------------------
+   SIDEBAR (menú lateral)
+------------------------------ */
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: var(--sidebar-width);
+    margin-left: -var(--sidebar-width);
+    transition: margin 0.25s ease-out;
+
+    background-color: var(--gray-50);   /* fondo gris claro */
+    border-right: 1px solid var(--white);
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    color: var(--gray-800);
+}
+
+#sidebar-wrapper .list-group {
+    width: var(--sidebar-width);
+}
+
+#sidebar-wrapper .list-group-item {
+    background-color: transparent;
+    color: var(--gray-800);
+    border: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+    background-color: var(--gray-200) !important;
+    color: var(--gray-800) !important;
+}
+
+#sidebar-wrapper .list-group-item.active {
+    background-color: var(--gray-600) !important;
+    color: var(--white) !important;
+}
+
+/* -----------------------------
+   CONTENIDO PRINCIPAL
+------------------------------ */
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+/* -----------------------------
+   TARJETAS / CARDS
+------------------------------ */
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--gray-200);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background-color: var(--gray-200);
+    color: var(--gray-800);
+}
+
+/* -----------------------------
+   CHART CONTAINER
+------------------------------ */
+.chart-container {
+    position: relative;
+    height: 400px;
+}
+
+/* -----------------------------
+   SCROLLBAR PERSONALIZADA
+------------------------------ */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-50);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-600);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-800);
+}
+
+/* -----------------------------
+   RESPONSIVE
+------------------------------ */
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    body.sb-sidenav-toggled #sidebar-wrapper {
+        margin-left: -var(--sidebar-width);
+    }
+}
