@@ -173,7 +173,7 @@ class HospitalDashboard {
         // Actualizar título e información
         document.getElementById('chartTitle').textContent = chartData.title;
         document.getElementById('chartInfo').textContent = 
-            `Población total: ${chartData.population} pacientes | Año: ${this.currentYear}`;
+            `Población total: ${chartData.population} pacientes | Año: ${this.currentYear} XX`;
     }
 
     showDesarrolloSection() {
